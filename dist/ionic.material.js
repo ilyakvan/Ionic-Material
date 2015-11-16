@@ -467,6 +467,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	                });
 	            };
 
+
+				Ink.disableEffects = function() {
+					var selectors = '.ink,.tab-item,.button-fab,.button-raised,.button-flat,.button-clear,a.item,.popup .button';
+
+					Array.prototype.forEach.call($$(seclectors), function(i){
+						i.removeEventListener('touchstart', Effect.show);
+						i.removeEventListener('touchend', Effect.hide);
+						i.removeEventListener('touchcancel', Effect.hide, false);
+						i.removeEventListener('mousedown', Effect.show, false);
+						i.removeEventListener('mouseup', Effect.hide, false);
+						i.removeEventListener('mouseleave', Effect.hide, false);
+
+					});
+				}
+
 	            return Ink;
 	    }
 
