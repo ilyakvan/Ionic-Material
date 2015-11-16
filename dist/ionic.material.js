@@ -468,7 +468,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            };
 
 
-				Ink.disableEffects = function() {
+				Ink.disableEffect = function(options) {
 					var selectors = '.ink,.tab-item,.button-fab,.button-raised,.button-flat,.button-clear,a.item,.popup .button';
 
 					Array.prototype.forEach.call($$(seclectors), function(i){
@@ -480,7 +480,7 @@ return /******/ (function(modules) { // webpackBootstrap
 						i.removeEventListener('mouseleave', Effect.hide, false);
 
 					});
-				}
+				};
 
 	            return Ink;
 	    }
