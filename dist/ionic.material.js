@@ -473,12 +473,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 					Array.prototype.forEach.call($$(selectors), function(i){
 						i.removeEventListener('touchstart', Effect.show);
-						i.removeEventListener('touchend', Effect.hide);
-						i.removeEventListener('touchcancel', Effect.hide, false);
 						i.removeEventListener('mousedown', Effect.show, false);
-						i.removeEventListener('mouseup', Effect.hide, false);
-						i.removeEventListener('mouseleave', Effect.hide, false);
-
 					});
 				};
 
